@@ -1,0 +1,82 @@
+
+ .text-effect {
+    overflow: hidden;
+    position: relative;
+    filter: contrast(110%) brightness(210%);
+}
+  
+.adi {
+    position: relative;
+    background: black;
+    color: transparent;
+}
+.adi::before, .adi::after {
+    content: attr(data-text);
+    color: white;
+    filter: blur(0.01em);
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events:none;
+}
+.adi::after {
+    mix-blend-mode:difference;
+}
+  
+.gradient,
+.light {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events:none;
+    z-index: 10;
+}
+  
+.gradient {
+    background: linear-gradient(45deg, rgb(115, 255, 0), blue);
+    mix-blend-mode: multiply;
+}
+  
+.light {
+    -webkit-animation: light 7s infinite linear;
+            animation: light 7s infinite linear;
+    background: radial-gradient(circle, rgb(49, 245, 0), transparent 25%) 0 0/25% 25%, radial-gradient(circle, rgb(255, 254, 255), rgb(0, 0, 0) 25%) 50% 50%/12.5% 12.5%;
+    top: -100%;
+    left: -50%;
+    mix-blend-mode: color-dodge;
+}
+  
+@-webkit-keyframes light {
+    
+    50% {
+      transform: translate3d(40%, 40%, 0);
+    }
+}
+  
+@keyframes light {
+    50% {
+      transform: translate3d(40%, 40%, 0);
+    }
+}
+.adi {
+    font:100px   "Lato", sans-serif;
+    
+    text-align: center;
+    margin: 0;
+}
+.adi:focus {
+    outline:indigo;
+    border: 2x dotted white;
+}
+  
+body {
+    background: black;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+  

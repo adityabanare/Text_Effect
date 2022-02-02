@@ -1,0 +1,25 @@
+<html lang="en" class=""><head>
+
+    <meta charset="UTF-8">
+    <title>Aditya</title>
+  
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+   <body>
+    
+  
+  <div class="text-effect">
+     <h1 class="adi" data-text="Aditya" contenteditable="true">Aditya</h1>
+    <div class="gradient"></div>
+    <div class="light"></div>
+  </div>
+   
+</body>
+<Script>
+    $('[data-text]').on('keyup', function(){
+  $(this).attr('data-text', $(this).text());
+});
+</Script>
+</html>
