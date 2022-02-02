@@ -1,2 +1,2 @@
 # Text_Effect
-neon text effect
+https://adityabanare.github.io/Text_Effect/
